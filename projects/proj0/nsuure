@@ -1,0 +1,133 @@
+
+
+public class Body {
+   public static double xxPos;     // position // Do i need static here?
+   public static double yyPos;
+   public static double xxVel ;    // velocity
+   public static double yyVel;
+   public static double mass;
+   public static String imgFileName;     // the name of the file to correspond to the img that depics body
+
+   // Later on, an instance of the Body class can represent a planet, star, or various objects in this universe
+   public Body(double xP, double yP, double xV,
+               double yV, double m, String img){
+
+      this.xxPos = xP;
+      this.yyPos = yP;
+      this.xxVel = xV;
+      this.yyVel = yV;
+      this.mass = m;
+      this.imgFileName = img;
+
+   }
+
+   public Body(Body b){
+
+      this.xxPos = b.xxPos;
+      this.yyPos = b.yyPos;
+      this.xxVel = b.xxVel;
+      this.yyVel = b.yyVel;
+      this.mass = b.mass;
+      this.imgFileName = b.imgFileName;
+
+   }
+
+   public double calcDistance(b){
+      double xxDis;
+      double yyDis;
+      double disSqr;
+      double dis ;
+      double increment;
+
+      xxDis = this.xxPos - b.xxPos;
+      yyDis = this.yyPos - b.yyPos;
+      disSqr = xxDis*xxDis + yyDis*yyDis;
+
+      // Some starting point for distance
+      if (xxDis > yyDis) {
+         dis = xxDis
+      } else {
+         dis = xxDis
+      }
+
+      // Now start with the distance
+      increment = 1;
+
+
+      dis = findSqrt(guess, bigNum, increment, threshold)
+
+         return dis;
+
+   }
+
+
+   public double findSqrt(double guess, double bigNum, double increment, double threshold){
+      double sign;
+
+      if (this.guess < 0){
+         sign = -1;
+         this.guess = -guess;  // convert to positive number for now
+      } else {
+         sign = 1;
+      }
+
+
+      // Loop until we are close enough to the threshold
+      while (closeEnough(this.guess, this.bigNum, this.threshold) == false){
+         this.guess = betterGuess(this.guess, this.bigNum, this.increment);
+         this.increment = adjustIncrement(guess, bigNum, increment);
+         findSqrt(this.guess, this.bigNum, this.increment, this.threshold);
+      }
+
+      return sign*guess;
+   }
+
+
+   public boolean closeEnough(double guess, double bigNum, double threshold){
+      /** Is the absolute difference less than the threshold? */
+      double difference = guess*guess - bigNum;
+
+      if ((difference == 0) ||
+          (difference > 0 &&  difference < threshold) ||
+          (difference < 0 && -difference < threshold)
+         ){
+         return true;
+
+      } else {
+         return false;
+      }
+   }
+
+   public double betterGuess(double guess, double bigNum, double increment){
+      /** What is a better guess than the current one? */
+      double difference = guess*guess - bigNum;
+
+      if (difference > 0){
+         return guess - increment;
+
+      } else {
+         return guess + increment;
+      }
+   }
+
+   public double adjustIncrement(double guess, double bigNum, double increment){
+      /** What is a better guess than the current one? */
+      double difference = guess*guess - bigNum;
+
+      if (difference >= increment*increment ){
+         return increment;
+
+      } else {
+         return increment/2;
+      }
+   }
+
+
+
+
+   public static void main(String[] args) {
+      Body a = new Body(xxPos, yyPos, xxVel, yyVel, mass, imgFileName);
+      double answer = b.calcDistance(2, 5, 1, 0.1);
+      System.out.println(answer);
+   }
+}
