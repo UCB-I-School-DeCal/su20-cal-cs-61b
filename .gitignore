@@ -27,7 +27,6 @@
 *.ctxt
 *.DS_Store
 *.ear
-*.jar
 *.lnk
 *.log
 *.msi
