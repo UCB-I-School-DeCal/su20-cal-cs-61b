@@ -1,50 +1,23 @@
-!.expelimicate
-!.gitignore
-!**.java
-!**.json
-!**.txt
-!*/
-._*
-.apdisk
-.AppleDB
-.AppleDesktop
-.AppleDouble
-.com.apple.timemachine.donotpresent
-.directory
-.DocumentRevisions-V100
-.fseventsd
-.fuse_hidden*
-.LSOverride
-.mtj.tmp/
-.nfs*
-.Spotlight-V100
-.TemporaryItems
-.Trash-*
-.Trashes
-.VolumeIcon.icns
-*.cab
+# Compiled class file
 *.class
-*.ctxt
-*.DS_Store
-*.ear
-*.jar
-*.lnk
+
+# Log file
 *.log
-*.msi
-*.msm
-*.msp
-*.rar
-*.tar.gz
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
 *.war
+*.nar
+*.ear
 *.zip
-**/out/
-*~
-$RECYCLE.BIN/
-Desktop.ini
-ehthumbs_vista.db
-ehthumbs.db
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-Icon
-Network Trash Folder
-Temporary Items
-Thumbs.db
